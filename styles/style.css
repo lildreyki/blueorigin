@@ -16,20 +16,27 @@ body {
 }
 
 header {
+    background-color: #0033DD;
     display: flex;
     justify-content: space-evenly;
-    background-color: #0033DD;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 nav {
-    display: flex;
     color: white;
     height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 ul {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 li {
@@ -39,18 +46,14 @@ li {
     font-weight: 600;
     text-transform: uppercase;
     width: 128px;
-    /*height: 42px;*/
-    padding: 36px 22px;
-
 }
 
 h1 {
     color: #FFF;
-    text-align: center;
     font-size: 48px;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 250px 330px 50px 330px;
+    margin-bottom: 100px;
 }
 
 h2 {
@@ -61,8 +64,13 @@ h2 {
     font-size: 60px;
     font-weight: 275;
     text-transform: uppercase;
-    margin-top: 26px;
-    margin-bottom: 18px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+section#fototeca {
+    background-color: #D9D9D9;
+    justify-content: center;
 }
 
 a {
@@ -71,57 +79,11 @@ a {
 }
 
 li a:hover {
-    color: white;
     border-bottom: 1px solid #FFF;
-}
-
-
-footer {
-    margin-top: 30px;
-    height: 640px;
-    color: white;
-    background-color: #202020;
-    font-size: 20px;
-    font-weight: 400;
-    display: flex;
-}
-
-footer div {
-    margin: auto;
-}
-
-footer div p {
-    font-size: 20px;
-    font-weight: 400;
 }
 
 /* ID and CLASS */
 
-#antestitulo {
-    font-size: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.fofofoto  {
-    width: 4000px;
-    text-align: center;
-}
-
-
-#titulo {
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-#subtitulo {
-    font-size: 16px;
-    font-weight: 500;
-    text-align: justify;
-    margin-bottom: 20px;
-}
 
 #central-lefttex {
     padding: 20px;
@@ -130,13 +92,46 @@ footer div p {
 #sec-careers {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-#sec-careers > div > img {
+.fofofoto  {
+    /*width: 4000px;
+    text-align: center;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: top;
+}
+
+#sec-careers img {
     height: 267px;
     width: 400px;
+    background: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
+#antestitulo {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+#titulo {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#subtitulo {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 30px;
+}
 #sec-careers > div {
     width: 400px;
     height: 550px;
@@ -144,21 +139,38 @@ footer div p {
     margin: 0px 20px 30px 20px;
 }
 
-#janela-right {
-    height: 455px;
-    padding: 50px;
-    background-color: #202020;
-    color: white;
+#sec-careers > div > h4  {
+    color: #fff;
+    font-size: 30px;
+    padding: 20px
+}
+
+.fofofoto > h5 {
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0px 20px 20px 20px;
+    text-align: justify;
 }
 
 #janela {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #janelaassento {
     height: 455px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#janela-right {
+    /*height: 455px;*/
+    padding: 20px;
+    background-color: #202020;
+    color: white;
 }
 
 #centro-left {
@@ -169,49 +181,68 @@ footer div p {
 
 
 #sec-central {
+    /*height: 469px;*/
     display: flex;
-    height: 469px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #centro-left {
-    padding: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
                         
 #fototeca {
-    display: flex;
+    display: flex inline;
     flex-wrap: wrap;
-    /*justify-content: space-evenly;*/
 }
 
 #forms {
     background-color: rgba(255, 255, 255, 0.50);
-    display: flex;
-    width: 360px;
-    min-width: 320px;
+    width: 90%;
     padding: 24px;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 }
 
-#div-right {
-    background-color: #383838;
-    padding: 40px;
-    font-size: 20px;
-    font-weight: 400;
+input[type="text"], [type="email"] {
+    width: 97.7%;
+    height: 25px;
+    padding: -50px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: white;
+    padding: 10px 160px 10px 160px;
+    border: none;
+    cursor: pointer;
+}
+
+#message {
+    height: 50px;
 }
 
 #principal {
     background-image: url(/img/bg-banner.png);
-    width: auto;
-    height: 960px;
+    /*width: auto;*/
+    height: 600px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    flex: content;
+    /*flex: content;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#test {
+#principal-aligh {
     text-align: center;
 }
 
@@ -222,62 +253,158 @@ footer div p {
     background-size: cover;
 }
 
-#blue-origin-logo {
-    width: 210px;
-    height: 53px;
-    padding: 20px 16px;
+svg {
+    margin: 50px 0px 50px -170px;
+}
+
+footer {
+    /*margin-top: 30px;*/
+    /*height: 640px;*/
+    color: white;
+    background-color: #202020;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*footer div {
+    margin: auto;
+}*/
+
+/*footer div p {
+    font-size: 20px;
+    font-weight: 400;
+}*/
+
+#footer-left {
+    padding-left: 30px;
+}
+
+#footer-left img {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+#footer-left p {
+    margin-bottom: 20px;
+}
+
+#txtright {
+    margin-left: 10px;
+}
+
+h6 {
+    font-weight: 200;
+    /*cursor: pointer;*/
+}
+
+#footer-left a {
+    padding: 5px;
+    font-weight: 450;
+    border-bottom: 1px solid #FFF;
+}
+
+#footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+h6 {
+    display: block;
+    text-decoration: none;
+    color: white;
+    line-height: 5;
+    font-weight: 300;
+}
+
+#footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #383838;
+    padding: 20px;
+    height: 660px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#footer-right h5 {
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .icon-play {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.aux {
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.aux-img {
+    display: flex;
+    justify-content: center;
+    align-items: top;
 }
 
 .butt {
     background-color: #D9D9D9;
     width: 152px;
-    height: 50px;
+    padding: 8px;
     color: #0033DD;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 .button {
     color: #03D;
-    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    width: 180px;
-    height: 40px;
     background-color: #D9D9D9;
     padding: 5px;
-    margin: auto;
 }
 
 .off-button {
     background-color: #03D;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
     width: 180px;
-    height: 40px;
     color: #D9D9D9;
     margin: auto;
-    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #0000004d;
 }
 
 #tripple {
-    align-items: center;
-    padding: 400px;
+    margin-top: 200px;
 }
 
-.material-symbols-outlined {
+#tripple:hover {
     cursor: pointer;
-    margin: auto;
 }
 
+.hamburger {
+    width: 30px;
+    height: 27.1px;
+    cursor: pointer;
+}
 
 /* ID and CLASS */
