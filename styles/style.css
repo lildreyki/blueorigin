@@ -230,7 +230,7 @@ input[type="submit"] {
 }
 
 #principal {
-    background-image: url(../blueorigin/img/bg-banner.png);
+    background-image: url(../../blueorigin/img/bg-banner.png);
     /*width: auto;*/
     height: 600px;
     background-position: center center;
@@ -409,3 +409,4 @@ h6 {
 
 
 /* ID and CLASS */
+
